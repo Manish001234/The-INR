@@ -24,8 +24,10 @@ const Ticket = () => {
 
       const randomTicket =()=>{
         setData(Math.floor((Math.random()*1000000)+6))
-      
-        
+      }
+      const addData=()=>{
+        setData("")
+       Tickets.length<5? SetTickets([...Tickets,Data]): alert("Ticket Limit Reached")
       }
   return (
     <div className='container'>
@@ -53,9 +55,7 @@ const Ticket = () => {
        </div>
        <div >
             <button onClick={()=>{
-                SetTickets([...Tickets,Data])
-                setData("")
-                
+               addData()
 
             }}  id='addticket' >+  Add Ticket</button>
           </div>
